@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Qwigley', cursive;
+font-family: 'Stalemate', cursive; */
+
+.max-width{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    height: 100vh;
+    position: relative;
+} 
+
+.navbar .max-width{
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.navbar.sticky{
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(1rem);
+}
+
+.navbar .logo{
+    font-family: 'Qwigley', cursive;
+    color: white;
+    font-size: 3rem;
+    padding: 0 2rem;
+}
+
+.navbar .logo.sticky{
+    color: black;
+}
+
+.navlinks{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+.navbar a{
+    color: gray;
+    text-decoration: none;
+    padding: 0 2rem;
+}
+
+.navbar a:hover{
+    color: #64b3dc;
+}
+
+.navbar a.active{
+    border-bottom: 0.4rem solid #64b3dc;
+    margin: 0 1.5rem;
+    padding: 0.1rem 0.5rem;
+    color: #64b3dc;
+}
+
+.navbar .burger{
+    display: none;
+    pointer-events: none;
+}
+
+.navbar .line{
+    width: 2rem;
+    height: 0.3rem;
+    margin: 0.5rem 1rem;
+    background-color: white;
+}
+
+.navbar .line.sticky{
+    background-color: black;
+}
+
+header .homeimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+header .back1{
+    background-image: url('back1.png');
+    background-size: cover;
+    background-position: 0 0;
+}
+
+header .back2{
+    background-image: url('back2.png');
+    background-size: cover;
+}
+header .back3{
+    background-image: url('back3.png');
+    background-size: cover;
+}
+header .back4{
+    background-image: url('back4.png');
+    background-size: cover;
+}
+header .back5{
+    background-image: url('back5.png');
+    background-size: cover;
+}
+
+.space{
+    background-color: white;
+}
+
+/* Responsive media query ____________________________________________ */
+
+@media screen and (max-width: 1900px){
+    html{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    html{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .navlinks{
+        background-color: white;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+    }  
+
+    .navlink{
+        width: 80%;
+        margin: 2rem auto;
+        border-bottom: 0.1rem solid gray;
+    }
+
+    .navbar a.active{
+        border-bottom: none;
+        color: gray;
+    }
+
+    .navbar .burger{
+        display: block;
+        cursor: pointer;;
+    }
+}
